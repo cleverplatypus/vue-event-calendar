@@ -701,6 +701,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -1020,7 +1021,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "date"
   }, [_vm._v("\n    " + _vm._s(_vm.dayEventsTitle) + "\n  ")]), _vm._v(" "), _c('div', {
     staticClass: "cal-events"
-  }, [_vm._t("eventdetails", _vm._l((_vm.events), function(event, index) {
+  }, [_vm._t("default", _vm._l((_vm.events), function(event, index) {
     return _c('div', {
       key: index,
       staticClass: "event-item"
@@ -1051,14 +1052,16 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "cur-day-changed": _vm.handleChangeCurDay,
       "month-changed": _vm.handleMonthChanged
     }
-  }), _vm._v(" "), _c('cal-events', {
+  }, [_vm._t("calendar-title", null, {
+    calendar: _vm.calendarOptions.params
+  })], 2), _vm._v(" "), _c('cal-events', {
     attrs: {
       "title": _vm.title,
       "dayEvents": _vm.selectedDayEvents,
       "locale": _vm.calendarOptions.options.locale,
       "color": _vm.calendarOptions.options.color
     }
-  }, [_vm._t("default", null, {
+  }, [_vm._t("event-details", null, {
     showEvents: _vm.selectedDayEvents.events
   })], 2)], 1)
 },staticRenderFns: []}
@@ -1081,7 +1084,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "arrow-left icon"
   }, [_vm._v(" ")])]), _vm._v(" "), _c('div', {
     staticClass: "title"
-  }, [_vm._v(_vm._s(_vm.curYearMonth))]), _vm._v(" "), _c('div', {
+  }, [_vm._t("default", [_vm._v(_vm._s(_vm.curYearMonth))])], 2), _vm._v(" "), _c('div', {
     staticClass: "r",
     on: {
       "click": _vm.nextMonth

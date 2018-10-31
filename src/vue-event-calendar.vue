@@ -6,13 +6,14 @@
       :selectedDay='selectedDayEvents.date'
       @cur-day-changed="handleChangeCurDay"
       @month-changed="handleMonthChanged">
+      <slot name="calendar-title" :calendar="calendarOptions.params"></slot>
     </cal-panel>
     <cal-events
       :title="title"
       :dayEvents="selectedDayEvents"
       :locale="calendarOptions.options.locale"
       :color="calendarOptions.options.color">
-      <slot :showEvents="selectedDayEvents.events"></slot>
+      <slot name="event-details" :showEvents="selectedDayEvents.events"></slot>
     </cal-events>
   </div>
 </template>

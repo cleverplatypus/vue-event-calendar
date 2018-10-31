@@ -2,7 +2,7 @@
   <div class="cal-wrapper">
     <div class="cal-header">
       <div class="l" @click="preMonth"><div class="arrow-left icon">&nbsp;</div></div>
-      <div class="title"><slot name="calendar-title">{{curYearMonth}}</slot></div>
+      <div class="title"><slot>{{curYearMonth}}</slot></div>
       <div class="r" @click="nextMonth"><div class="arrow-right icon">&nbsp;</div></div>
     </div>
     <div class="cal-body">
