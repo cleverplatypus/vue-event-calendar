@@ -4,7 +4,7 @@
       {{dayEventsTitle}}
     </h2>
     <div class="cal-events">
-      <slot>
+      <slot name="event-details">
         <div v-for="(event, index) in events" class="event-item" :key="index">
           <cal-event-item :event="event" :index="index" :locale="locale"></cal-event-item>
         </div>
